@@ -14,6 +14,7 @@ RUN npm run build
 # whatrver the output from the above temporary container that is the build floder
 # is given frther to the new container
 FROM nginx
+EXPOSE 80
 
 COPY --from=builder /app/build /usr/share/nginx/html
  
